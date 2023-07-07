@@ -9,6 +9,6 @@ COPY --chown=node:node ./package.json ./
 RUN npm install
 COPY --chown=node:node ./ ./
 
-EXPOSE 3001
+EXPOSE 8080
  
-CMD ["npm", "run", "start"]
+CMD ["node", "server.js"]
