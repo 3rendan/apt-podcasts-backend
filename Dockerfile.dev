@@ -1,3 +1,4 @@
+# This is based on the Luke Mwilia DockerCon youtube
 FROM node:16-alpine AS alpine
  
 USER node

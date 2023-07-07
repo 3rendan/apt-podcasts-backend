@@ -1,3 +1,4 @@
+# Developed with Udemy Docker and Kubernetes: The Practical Guid (pt. 82)
 FROM node:16-alpine AS alpine
  
 USER node
