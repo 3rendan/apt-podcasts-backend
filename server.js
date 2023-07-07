@@ -82,7 +82,7 @@ app.delete('/podcasts/:id', async (req, res) => {
 })
 mongoose.set('strictQuery', false)
 mongoose.connect(
-  'mongodb://host.docker.internal:27017/podcasts',
+  'mongodb://mongodb:27017/podcasts',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
