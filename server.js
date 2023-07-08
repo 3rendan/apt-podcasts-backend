@@ -1,13 +1,11 @@
 const fs = require('fs')
 const path = require('path')
-
 const express = require('express')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
-
-const Podcasts = require('./src/models/podcasts')
-
 const app = express()
+
+const APTPodcasts = require('./src/models/aptPodcasts')
 
 const accessLogStream = fs.createWriteStream(
   path.join(__dirname, 'logs', 'access.log'),
@@ -24,15 +22,21 @@ app.use((req, res, next) => {
   next()
 })
 
-app.get('/podcasts', async (req, res) => {
-  console.log('TRYING TO FETCH PODCASTS')
+app.get('/atp-podcasts', async (req, res) => {
+  console.log('TRYING TO FETCH APT PODCAST STUDIOS INFO')
   try {
-    const podcasts = await Podcasts.find()
+    const aptPodcasts = await APTPodcasts.find()
     res.status(200).json({
-      podcasts: podcasts.map((podcast) => ({
-        id: podcast.id,
-        title: podcast.title,
-        category: podcast.category
+      aptPodcasts: aptPodcasts.map((aptPodcast) => ({
+        id: aptPodcast.id,
+        name: aptPodcast.name,
+        category: aptPodcast.category,
+        image: {
+          alt: aptPodcast.image.alt,
+          url: aptPodcast.image.url
+        },
+        produced: aptPodcast.produced,
+        distributed: aptPodcast.distributed
       })),
     })
     console.log('FETCHED PODCASTS')

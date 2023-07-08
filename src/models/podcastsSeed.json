@@ -1,0 +1,30 @@
+{
+  "name": "If This Food Could Talk",
+  "category": ["History", "Food"],
+  "image": {
+    "alt": "If This Food Could Talk Logo",
+    "url": "https://foreverdogpodcasts.com/wp-content/uploads/2022/11/BestShowFDLogo-1536x1536.jpg"
+  },
+  "produced": true,
+  "distributed": false
+},
+{
+  "name": "Armchair Explorer",
+  "category": "Travel",
+  "image": {
+    "alt": "Armchair Explorer Logo",
+    "url": "https://static.wixstatic.com/media/63af2e_55762961f6c64b0a8c111d5fdae5114e~mv2_d_3000_3000_s_4_2.png/v1/fill/w_200,h_200,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Armchair-Gray-Logo.png"
+  },
+  "produced": false,
+  "distributed": true
+}
+{
+  "name": "Gravy",
+  "category": ["History", "Travel"],
+  "image": {
+    "alt": "SFA Gravy Logo",
+    "url": "https://s3.amazonaws.com/production.mediajoint.prx.org/public/series_images/21724/Logo_GravyPodcast_2019_medium.jpg"
+  },
+  "produced": false,
+  "distributed": true
+}
