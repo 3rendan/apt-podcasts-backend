@@ -12,7 +12,6 @@ const accessLogStream = fs.createWriteStream(
   { flags: 'a' }
 )
 
-
 app.use(bodyParser.json())
 
 app.use((req, res, next) => {
@@ -86,7 +85,7 @@ app.delete('/podcasts/:id', async (req, res) => {
 })
 mongoose.set('strictQuery', false)
 mongoose.connect(
-  'mongodb://mongodb:27017/podcasts',
+  'mongodb+srv://brendan:nolabola@cluster0.l2eyikv.mongodb.net/?retryWrites=true&w=majority',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
